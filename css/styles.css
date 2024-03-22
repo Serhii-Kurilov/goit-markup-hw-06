@@ -14,6 +14,11 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -201,25 +206,65 @@ h1 {
 
 .workers {
   background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
+}
+
+.workers h3,
+p {
+  text-align: center;
+}
+
+.info {
+  margin: 32px 16px;
 }
 
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 120px auto;
 }
 
 .portfolio ul {
-  width: calc((100% - 48px) / 3);
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  margin-top: 48px;
+}
+
+.portfolio li {
+  width: calc((100% - 48px) / 3);
+  border: 1px solid #e7e9fc;
+}
+
+.portfolio li p {
+  text-align: left;
+}
+
+.portfolio-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 16px;
 }
 
 .footer {
+  height: 312px;
   background-color: #2e2f42;
 }
 
+.footer .container {
+  padding: 100px 0;
+}
 .footer .text {
   color: #f4f4fd;
+  display: block;
+  width: 264px;
+  height: 72px;
+  padding-top: 16px;
+  text-align: left;
 }
 
 .footer .logos {
