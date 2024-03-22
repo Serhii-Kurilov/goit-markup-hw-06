@@ -1,3 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -7,11 +33,19 @@ body {
   background-color: #ffffff;
 }
 
-h1 {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 1.12px;
+.container {
+  max-width: 1128px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header .container {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -22,18 +56,22 @@ h1 {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  text-decoration: none;
 }
 
 .logos {
   color: #2e2f42;
 }
 
-ul {
-  list-style-type: none;
+.menu,
+.address-list {
+  display: flex;
+  gap: 40px;
 }
 
-.link {
-  text-decoration: none;
+.logo-menu {
+  display: flex;
+  gap: 76px;
 }
 
 .menu .link {
@@ -47,7 +85,7 @@ ul {
   color: #404bbf;
 }
 
-.address {
+.address ul {
   font-style: normal;
 }
 
@@ -64,12 +102,27 @@ ul {
 }
 
 .studio {
+  display: block;
   background-color: #2e2f42;
   color: #ffffff;
   text-align: center;
+  height: 600px;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: 1.12px;
+}
+
+.title {
+  padding: 188px 0 0 0;
 }
 
 .button {
+  height: 56px;
+  width: 169px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   letter-spacing: 0.04em;
@@ -78,11 +131,31 @@ ul {
   color: #ffffff;
   background-color: #4d5ae5;
   cursor: pointer;
+  margin-top: 48px;
 }
 
 .button:hover,
 .button:focus {
   background-color: #404bbf;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.description .container ul {
+  display: inline-flex;
+  gap: 24px;
+  margin: 120px auto;
 }
 
 .tit {
@@ -99,6 +172,21 @@ ul {
 
 .team {
   background-color: #f4f4fd;
+  height: 732px;
+  display: flex;
+  align-items: center;
+}
+
+.team .container ul {
+  display: inline-flex;
+  gap: 24px;
+}
+
+.team .container .titl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 72px;
 }
 
 .titl {
@@ -113,6 +201,17 @@ ul {
 
 .workers {
   background-color: #ffffff;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio ul {
+  width: calc((100% - 48px) / 3);
+  gap: 24px;
 }
 
 .footer {
