@@ -170,10 +170,6 @@ body {
   padding: 120px 0;
 }
 
-.description-list {
-  display: flex;
-}
-
 .description-list-info {
   width: calc((100% - 72px) / 4);
 }
@@ -183,7 +179,7 @@ body {
 }
 
 .description .container ul {
-  display: inline-flex;
+  display: flex;
   gap: 24px;
 }
 
@@ -217,7 +213,7 @@ body {
 }
 
 .team .container ul {
-  display: inline-flex;
+  display: flex;
   gap: 24px;
 }
 
@@ -253,7 +249,7 @@ p {
 }
 
 .info {
-  margin: 32px 16px;
+  padding: 32px 0;
 }
 
 .portfolio {
@@ -288,6 +284,7 @@ p {
   gap: 8px;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .portfolio-info .tit {
