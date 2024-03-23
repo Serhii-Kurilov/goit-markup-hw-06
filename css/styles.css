@@ -85,6 +85,7 @@ body {
 }
 
 .menu .link {
+  display: block;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #2e2f42;
@@ -269,7 +270,6 @@ p {
 
 .portfolio-list li {
   width: calc((100% - 48px) / 3);
-  border: 1px solid #e7e9fc;
 }
 
 .portfolio li p {
@@ -277,7 +277,6 @@ p {
 }
 
 .portfolio-info {
-  display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
@@ -312,4 +311,8 @@ p {
 
 .footer .logos {
   color: #f4f4fd;
+}
+
+p {
+  margin-bottom: 0;
 }
