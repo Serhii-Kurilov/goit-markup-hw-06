@@ -86,12 +86,17 @@ body {
   padding: 24px 0;
 }
 
-.current {
+.link:hover,
+.link:focus {
+  color: #404bbf;
+}
+
+.link.current {
   position: relative;
   color: #404bbf;
 }
 
-.current::after {
+.link.current::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -101,11 +106,6 @@ body {
   border-radius: 2px;
   background-color: #404bbf;
   content: "";
-}
-
-.link:hover,
-.link:focus {
-  color: #404bbf;
 }
 
 .address ul {
