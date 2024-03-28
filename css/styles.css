@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -142,6 +152,7 @@ body {
   background-position: center center;
   background-size: cover;
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .title {
@@ -214,7 +225,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 100px;
   margin-bottom: 8px;
   height: 112px;
 }
@@ -297,10 +307,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.workers:hover .workers-icon-link {
-  background-color: #404bbf;
-}
-
+.workers-icon-link:hover,
 .workers-icon-link:focus {
   background-color: #404bbf;
 }
