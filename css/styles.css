@@ -164,7 +164,7 @@ body {
   margin: auto;
 }
 
-.button {
+.studio-button {
   display: block;
   height: 56px;
   min-width: 169px;
@@ -183,8 +183,8 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button:hover,
-.button:focus {
+.studio-button:hover,
+.studio-button:focus {
   background-color: #404bbf;
 }
 
@@ -430,12 +430,7 @@ p {
   color: #f4f4fd;
 }
 
-.footer .social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 16px;
+.footer-social-icon {
   margin: 0;
   margin-right: 80px;
 }
@@ -551,6 +546,11 @@ p {
   border: none;
 }
 
+.email-button:hover,
+.email-button:focus {
+  background-color: #404bbf;
+}
+
 .icon-email {
   margin-left: 16px;
 }
@@ -607,10 +607,6 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
 }
@@ -640,9 +636,6 @@ p {
 }
 
 .icon-close {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -660,7 +653,6 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin-top: 72px;
   margin-bottom: 16px;
 }
 
@@ -766,6 +758,7 @@ p {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
 }
 
 .policy-check:checked + .policy > .check-true {
