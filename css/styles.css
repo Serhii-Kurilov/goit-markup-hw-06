@@ -509,29 +509,30 @@ p {
   z-index: 1;
 }
 
-.subscribe input {
-  display: flex;
+.email-input {
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
+  background-color: transparent;
+  padding-left: 16px;
+}
+
+.email-input::placeholder {
+  color: #ffffff;
 }
 
 .email-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
   border-radius: 4px;
-  padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background: #4d5ae5;
   font-family: "Roboto", sans-serif;
@@ -541,23 +542,26 @@ p {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  gap: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.icon-email {
+  margin-left: 16px;
 }
 
 .subscribe {
-  display: flex;
-  flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  text-align: start;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  gap: 16px;
 }
 
-.form-email {
-  display: inline-flex;
+.label-subscribe {
+  display: flex;
   align-items: flex-end;
   justify-content: center;
   gap: 24px;
@@ -603,21 +607,17 @@ p {
   align-items: center;
   flex-direction: column;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-close {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-end;
+  padding: 72px 24px 24px 24px;
 }
 
 .close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 24px;
   right: 24px;
-  border-radius: 100%;
+  border-radius: 50%;
   width: 24px;
   height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -628,8 +628,13 @@ p {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close:hover,
+.close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
 .icon-close {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -640,11 +645,6 @@ p {
 .close:hover .icon-close,
 .close:focus .icon-close {
   fill: #ffffff;
-}
-.close:hover,
-.close:focus {
-  background-color: #404bbf;
-  border: none;
 }
 
 .modal-title {
@@ -659,24 +659,19 @@ p {
   margin-bottom: 16px;
 }
 
-.modal-form {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 8px;
-  border-radius: 4px;
-  width: 360px;
-  height: 336px;
+.form-box {
+  margin-bottom: 8px;
 }
 
 .label-form {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .modal-position-icon {
@@ -696,7 +691,7 @@ p {
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
   border-radius: 4px;
-  width: 360px;
+  width: 100%;
   height: 40px;
   padding-left: 38px;
   background-color: transparent;
@@ -711,25 +706,18 @@ p {
   fill: #4d5ae5;
 }
 
-.comment-form {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
+.form-box-comment {
+  margin-bottom: 16px;
 }
 
-.comment-form .comment {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+.comment {
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
+  width: 100%;
   height: 120px;
   padding: 8px 16px;
   outline: transparent;
@@ -740,23 +728,10 @@ p {
 
 .comment:focus-within {
   border-color: #4d5ae5;
-
-.policy-form {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  width: 360px;
-  height: 16px;
 }
 
-.text-policy {
-  line-height: 1.33333;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #4d5ae5;
+.policy-form {
+  margin-bottom: 24px;
 }
 
 .policy {
@@ -766,12 +741,19 @@ p {
   color: #8e8f99;
 }
 
+.text-policy {
+  color: #4d5ae5;
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
 .check-true {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   fill: transparent;
-  position: relative;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -788,17 +770,13 @@ p {
 }
 
 .modal-send {
-  display: flex;
-align-items: flex-start;
-justify-content: flex-start;
-flex-direction: row;
-gap: 10px;
-border-radius: 4px;
-padding: 16px 32px;
-width: 169px;
-height: 56px;
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-background: #4d5ae5;
+  display: block;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
