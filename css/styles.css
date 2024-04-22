@@ -4,6 +4,37 @@
   box-sizing: border-box;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .logo-menu .menu {
+    display: none;
+  }
+
+  .address {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+  }
+
+  .icon-burger {
+    position: absolute;
+    fill: #2f2f37;
+    z-index: 1;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -40,11 +71,9 @@ body {
 }
 
 .container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
 .header {
@@ -54,10 +83,11 @@ body {
 }
 
 .header .container {
-  height: 72px;
+  height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
 }
 
 .logo {
@@ -69,17 +99,17 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
-  margin-right: 76px;
+  padding: 17.5px 0;
 }
 
 .logos {
   color: #2e2f42;
 }
 
-.menu,
-.address-list {
+.menu {
   display: flex;
   gap: 40px;
+  margin: auto 120px;
 }
 
 .logo-menu {
@@ -93,7 +123,6 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding: 24px 0;
 }
 
 .link:hover,
@@ -142,44 +171,56 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero.jpg);
+    url(../images/hero-mobile.jpg);
   background-color: #2e2f42;
   color: #ffffff;
   text-align: center;
-  height: 600px;
-  padding: 188px 0;
+  height: 432px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .studio {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-mobile-2x.jpg);
+  }
 }
 
 .title {
-  font-size: 56px;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 1.12px;
-  max-width: 496px;
-  margin: auto;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: white;
+  width: 216px;
+  padding: 72px 52px;
 }
 
 .studio-button {
   display: block;
-  height: 56px;
-  min-width: 169px;
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.04em;
   font-weight: 500;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
   color: #ffffff;
-  background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
   cursor: pointer;
   margin: auto;
-  margin-top: 48px;
   border-radius: 4px;
+  width: 169px;
+  height: 56px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -202,76 +243,58 @@ body {
 }
 
 .description {
-  padding: 120px 0;
+  margin: 96px auto;
 }
 
-.description-list-info {
-  width: calc((100% - 72px) / 4);
-}
-
-.description-list-info p {
-  text-align: left;
-}
-
-.description .container ul {
+.description-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .description-icon {
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  background: #f4f4fd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-  height: 112px;
+  display: none;
 }
 
 .description-title {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
   letter-spacing: 0.02em;
+  text-align: center;
   color: #2e2f42;
   margin-bottom: 8px;
 }
 
 .description-text {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 150%;
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: left;
 }
 
 .team {
   background-color: #f4f4fd;
-  height: 732px;
+  height: 2232px;
+  width: 100%;
   display: flex;
-  align-items: center;
-  padding: 120px 0;
 }
 
 .team-list {
   display: flex;
-}
-
-.team .container {
-  padding: 32px 0;
-}
-
-.team .container ul {
-  display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .team-title {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 96px;
   margin-bottom: 72px;
   font-size: 36px;
   font-weight: 700;
@@ -298,6 +321,7 @@ body {
   fill: #f4f4fd;
   z-index: 1;
 }
+
 .workers-icon-link {
   width: 100%;
   height: 100%;
@@ -333,7 +357,7 @@ body {
 }
 
 .portfolio {
-  padding: 120px 0 120px 0;
+  padding: 96px 0;
 }
 
 .portfolio-title {
@@ -344,22 +368,15 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  text-align: center;
   color: #2e2f42;
 }
 
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  row-gap: 48px;
-}
-
-.portfolio-list li {
-  width: calc((100% - 48px) / 3);
-}
-
-.portfolio li p {
-  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
 }
 
 .portfolio-list-info {
@@ -405,6 +422,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: left;
 }
 
 .box-overlay {
@@ -426,27 +444,26 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
-.footer .text {
+.footer-container-text {
   color: #f4f4fd;
   display: block;
-  width: 264px;
+  width: 288px;
   height: 72px;
-  text-align: left;
+  text-align: center;
 }
 
 .footer .logo {
   display: inline-block;
+  margin: 0;
   margin-bottom: 16px;
 }
 
@@ -455,27 +472,20 @@ body {
 }
 
 .footer-social-icon {
-  margin: 0;
-  margin-right: 80px;
+  margin: 72px 56px;
 }
 
 .footer-icon {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   gap: 16px;
   margin: 0;
 }
 
-.footer .container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-}
-
 .footer-container {
-  margin-right: 120px;
+  text-align: center;
 }
 
 .text-social {
@@ -486,6 +496,7 @@ body {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 p {
@@ -528,17 +539,13 @@ p {
   z-index: 1;
 }
 
-.form-email {
-  display: flex;
-  gap: 24px;
-}
-
 .email-input {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  opacity: 0.3;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
@@ -552,6 +559,7 @@ p {
 }
 
 .email-button {
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -569,6 +577,7 @@ p {
   cursor: pointer;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 16px 61px 96px 62px;
 }
 
 .email-button:hover,
@@ -581,20 +590,13 @@ p {
 }
 
 .subscribe {
-  text-align: start;
+  text-align: center;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-}
-
-.label-subscribe {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 24px;
 }
 
 .modal-overlay {
@@ -624,8 +626,8 @@ p {
 .modal {
   position: absolute;
   border-radius: 4px;
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  height: 623px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
@@ -654,15 +656,16 @@ p {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close .icon-close {
+  position: absolute;
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .close:hover,
 .close:focus {
   background-color: #404bbf;
   border: none;
-}
-
-.icon-close {
-  fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close:hover .icon-close,
@@ -800,7 +803,6 @@ p {
 .modal-send {
   display: block;
   border-radius: 4px;
-  padding: 16px 32px;
   min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -812,13 +814,484 @@ p {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  margin-left: auto;
-  margin-right: auto;
   cursor: pointer;
   border: none;
+  margin: auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-send:hover {
   background-color: #404bbf;
+}
+
+.modal-overlay-menu {
+  background: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.modal-menu {
+  position: absolute;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
+}
+
+.menu-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: absolute;
+  top: 80px;
+  left: 41px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 160px;
+}
+
+.address-mobile .address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  bottom: 128px;
+  left: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #434455;
+  margin-bottom: 48px;
+}
+
+.box-menu-icon {
+  position: absolute;
+  bottom: 40px;
+  left: 16px;
+}
+
+.social-icon-mobile {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.icon-relative-mobile {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.mobile-icon-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-icon-link:hover,
+.mobile-icon-link:focus {
+  background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .header .container {
+    height: 72px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .logo {
+    margin: 24px auto;
+  }
+
+  .menu {
+    margin-top: 24px;
+  }
+
+  .menu .link {
+    padding-bottom: 24px;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .address .link {
+    text-align: end;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+  }
+
+  .studio {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-tablet.jpg);
+  }
+
+  @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    .studio {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-tablet-2x.jpg);
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-size: 56px;
+    line-height: 107%;
+    width: 496px;
+    height: 120px;
+    margin: 112px 136px;
+    margin-bottom: 36px;
+    padding: 0;
+  }
+
+  .description-title {
+    text-align: left;
+  }
+
+  .description-list {
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .description-list-info {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .team {
+    height: 1224px;
+  }
+
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+
+  .info {
+    padding: 32px 16px;
+  }
+
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .portfolio-list-info {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .footer {
+    padding: 0;
+    height: 456px;
+  }
+
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 96px 0;
+  }
+
+  .footer-container {
+    margin-left: 108px;
+    margin-right: 24px;
+    text-align: left;
+  }
+
+  .footer-container-text {
+    text-align: left;
+  }
+
+  .footer-social-icon {
+    margin: 0;
+    margin-bottom: 104px;
+  }
+
+  .text-social {
+    text-align: left;
+  }
+
+  .subscribe {
+    text-align: left;
+    margin-left: 108px;
+  }
+
+  .form-email {
+    display: flex;
+    margin: 0;
+  }
+
+  .email-input {
+    width: 264px;
+    margin-left: 108px;
+  }
+
+  .email-button {
+    margin: 0;
+    margin-left: 24px;
+  }
+
+  .modal {
+    width: 408px;
+    height: 584px;
+  }
+
+  .modal-overlay-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+
+  .menu,
+  .address-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .logo {
+    margin-left: 156px;
+  }
+
+  .logo-menu {
+    display: flex;
+    gap: 76px;
+  }
+
+  .menu {
+    margin: 0;
+    margin-top: 24px;
+    margin-right: 156px;
+  }
+
+  .address {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .studio {
+    display: block;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-pc.jpg);
+    width: 1440px;
+    height: 600px;
+    padding: 188px 0;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    .studio {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-pc-2x.jpg);
+    }
+  }
+
+  .title {
+    font-size: 56px;
+    line-height: 107%;
+    max-width: 496px;
+    margin: auto;
+    margin-bottom: 48px;
+  }
+
+  .description {
+    width: 100%;
+    height: 224px;
+  }
+
+  .description-list {
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .description-list-info {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .description-list-info p {
+    text-align: left;
+  }
+
+  .description .container ul {
+    display: flex;
+    gap: 24px;
+  }
+
+  .description-icon {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background: #f4f4fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    height: 112px;
+  }
+
+  .description-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .description-text {
+    font-weight: 400;
+  }
+
+  .team {
+    height: 780px;
+  }
+
+  .team .container {
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .team-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .portfolio {
+    padding: 120px 0 120px 0;
+  }
+
+  .portfolio-list {
+    flex-wrap: wrap;
+    gap: 48px 24px;
+  }
+
+  .portfolio-list li {
+    width: calc((100% - 48px) / 3);
+  }
+
+  .footer {
+    height: 312px;
+  }
+
+  .footer .container {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+    padding: 100px 0;
+    margin: 0 156px;
+  }
+
+  .footer-container {
+    margin: 0;
+    margin-right: 120px;
+    text-align: left;
+  }
+
+  .footer .logo {
+    margin-bottom: 16px;
+  }
+
+  .footer-social-icon {
+    margin-right: 80px;
+  }
+
+  .footer-icon {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .email-input {
+    margin-left: 0;
+  }
+
+  .subscribe {
+    text-align: start;
+    margin-left: 0;
+  }
+
+  .label-subscribe {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .email-form {
+    width: 453px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+  }
 }
