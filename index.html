@@ -418,21 +418,21 @@
                       ./images/banking-pc.jpg    1x,
                       ./images/banking-pc-2x.jpg 2x
                     "
-                    media="min-width: 1158px"
+                    media="(min-width: 1158px)"
                   />
                   <source
                     srcset="
                       ./images/banking-tablet.jpg    1x,
                       ./images/banking-tablet-2x.jpg 2x
                     "
-                    media="min-width: 768px"
+                    media="(min-width: 768px)"
                   />
                   <source
                     srcset="
                       ./images/banking-mobile.jpg    1x,
                       ./images/banking-mobile-2x.jpg 2x
                     "
-                    media="min-width: 320px"
+                    media="(min-width: 320px)"
                   />
                   <img
                     src="./images/banking-pc.jpg"
@@ -460,21 +460,21 @@
                       ./images/cashless-pc.jpg    1x,
                       ./images/cashless-pc-2x.jpg 2x
                     "
-                    media="min-width: 1158px"
+                    media="(min-width: 1158px)"
                   />
                   <source
                     srcset="
                       ./images/cashless-tablet.jpg    1x,
                       ./images/cashless-tablet-2x.jpg 2x
                     "
-                    media="min-width: 768px"
+                    media="(min-width: 768px)"
                   />
                   <source
                     srcset="
                       ./images/cashless-mobile.jpg    1x,
                       ./images/cashless-mobile-2x.jpg 2x
                     "
-                    media="min-width: 320px"
+                    media="(min-width: 320px)"
                   />
                   <img
                     class="card-cashless"
@@ -503,21 +503,21 @@
                       ./images/meditaion-pc.jpg    1x,
                       ./images/meditaion-pc-2x.jpg 2x
                     "
-                    media="min-width: 1158px"
+                    media="(min-width: 1158px)"
                   />
                   <source
                     srcset="
                       ./images/meditaion-tablet.jpg    1x,
                       ./images/meditaion-tablet-2x.jpg 2x
                     "
-                    media="min-width: 768px"
+                    media="(min-width: 768px)"
                   />
                   <source
                     srcset="
                       ./images/meditaion-mobile.jpg    1x,
                       ./images/meditaion-mobile-2x.jpg 2x
                     "
-                    media="min-width: 320px"
+                    media="(min-width: 320px)"
                   />
                   <img
                     src="./images/meditaion-pc.jpg"
@@ -542,21 +542,21 @@
                 <picture>
                   <source
                     srcset="./images/taxi-pc.jpg 1x, ./images/taxi-pc-2x.jpg 2x"
-                    media="min-width: 1158px"
+                    media="(min-width: 1158px)"
                   />
                   <source
                     srcset="
                       ./images/taxi-tablet.jpg    1x,
                       ./images/taxi-tablet-2x.jpg 2x
                     "
-                    media="min-width: 768px"
+                    media="(min-width: 768px)"
                   />
                   <source
                     srcset="
                       ./images/taxi-mobile.jpg    1x,
                       ./images/taxi-mobile-2x.jpg 2x
                     "
-                    media="min-width: 320px"
+                    media="(min-width: 320px)"
                   />
                   <img
                     src="./images/taxi-pc.jpg"
@@ -584,21 +584,21 @@
                       ./images/illustrations-pc.jpg    1x,
                       ./images/illustrations-pc-2x.jpg 2x
                     "
-                    media="min-width: 1158px"
+                    media="(min-width: 1158px)"
                   />
                   <source
                     srcset="
                       ./images/illustrations-tablet.jpg    1x,
                       ./images/illustrations-tablet-2x.jpg 2x
                     "
-                    media="min-width: 768px"
+                    media="(min-width: 768px)"
                   />
                   <source
                     srcset="
                       ./images/illustrations-mobile.jpg    1x,
                       ./images/illustrations-mobile-2x.jpg 2x
                     "
-                    media="min-width: 320px"
+                    media="(min-width: 320px)"
                   />
                   <img
                     src="./images/illustrations-pc.jpg"
@@ -626,21 +626,21 @@
                       ./images/courses-pc.jpg    1x,
                       ./images/courses-pc-2x.jpg 2x
                     "
-                    media="min-width: 1158px"
+                    media="(min-width: 1158px)"
                   />
                   <source
                     srcset="
                       ./images/courses-tablet.jpg    1x,
                       ./images/courses-tablet-2x.jpg 2x
                     "
-                    media="min-width: 768px"
+                    media="(min-width: 768px)"
                   />
                   <source
                     srcset="
                       ./images/courses-mobile.jpg    1x,
                       ./images/courses-mobile-2x.jpg 2x
                     "
-                    media="min-width: 320px"
+                    media="(min-width: 320px)"
                   />
                   <img
                     src="./images/courses-pc.jpg"
@@ -856,8 +856,10 @@
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="" class="text-policy">Privacy Policy</a>
+              <span>
+                I accept the terms and conditions of the
+                <a href="" class="text-policy">Privacy Policy</a></span
+              >
             </label>
           </div>
           <button type="submit" class="modal-send">Send</button>
@@ -877,13 +879,13 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <div class="box-menu">
-          <ul class="menu-mobile">
-            <li><a class="link" href="">Studio</a></li>
-            <li><a class="link" href="">Portfolio</a></li>
-            <li><a class="link" href="">Contacts</a></li>
-          </ul>
-        </div>
+
+        <ul class="menu-mobile">
+          <li><a class="link active" href="">Studio</a></li>
+          <li><a class="link" href="">Portfolio</a></li>
+          <li><a class="link" href="">Contacts</a></li>
+        </ul>
+
         <address class="address-mobile">
           <ul class="address-list">
             <li>
@@ -896,58 +898,57 @@
             </li>
           </ul>
         </address>
-        <div class="box-menu-icon">
-          <ul class="social-icon-mobile">
-            <li class="icon-relative-mobile">
-              <a class="mobile-icon-link" href=""
-                ><svg
-                  class="icon-absolute"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <use href="./images/icons.svg#icon-instagram"></use></svg
-              ></a>
-            </li>
-            <li class="icon-relative-mobile">
-              <a class="mobile-icon-link" href=""
-                ><svg
-                  class="icon-absolute"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <use href="./images/icons.svg#icon-twitter"></use></svg
-              ></a>
-            </li>
-            <li class="icon-relative-mobile">
-              <a class="mobile-icon-link" href=""
-                ><svg
-                  class="icon-absolute"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <use href="./images/icons.svg#icon-facebook"></use></svg
-              ></a>
-            </li>
-            <li class="icon-relative-mobile">
-              <a class="mobile-icon-link" href=""
-                ><svg
-                  class="icon-absolute"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <use href="./images/icons.svg#icon-linkedin"></use></svg
-              ></a>
-            </li>
-          </ul>
-        </div>
+
+        <ul class="social-icon-mobile">
+          <li class="icon-relative-mobile">
+            <a class="mobile-icon-link" href=""
+              ><svg
+                class="icon-absolute"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <use href="./images/icons.svg#icon-instagram"></use></svg
+            ></a>
+          </li>
+          <li class="icon-relative-mobile">
+            <a class="mobile-icon-link" href=""
+              ><svg
+                class="icon-absolute"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <use href="./images/icons.svg#icon-twitter"></use></svg
+            ></a>
+          </li>
+          <li class="icon-relative-mobile">
+            <a class="mobile-icon-link" href=""
+              ><svg
+                class="icon-absolute"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <use href="./images/icons.svg#icon-facebook"></use></svg
+            ></a>
+          </li>
+          <li class="icon-relative-mobile">
+            <a class="mobile-icon-link" href=""
+              ><svg
+                class="icon-absolute"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <use href="./images/icons.svg#icon-linkedin"></use></svg
+            ></a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
