@@ -108,7 +108,7 @@ body {
 .menu {
   display: flex;
   gap: 40px;
-  margin: auto 120px;
+  margin: 0 0 0 120px;
 }
 
 .logo-menu {
@@ -122,6 +122,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
 }
 
 .link:hover,
@@ -148,19 +149,6 @@ body {
 
 .address ul {
   font-style: normal;
-}
-
-.address .link {
-  font-size: 16px;
-  font-weight: 400;
-  color: #434455;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address .link:hover,
-.address .link:focus {
-  color: #404bbf;
 }
 
 .studio {
@@ -955,15 +943,7 @@ p {
     margin: 24px auto;
   }
 
-  .menu {
-    margin-top: 24px;
-  }
-
-  .menu .link {
-    padding-bottom: 24px;
-  }
-
-  .address {
+  .address .address-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -977,15 +957,13 @@ p {
   }
 
   .studio {
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero-tablet.jpg);
+    padding: 112px 0;
   }
 
   @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
@@ -1000,16 +978,10 @@ p {
   }
 
   .title {
-    display: flex;
-    justify-self: center;
-    align-items: center;
     font-size: 56px;
     line-height: 107%;
     width: 496px;
-    height: 120px;
-    margin: 112px 136px;
     margin-bottom: 36px;
-    padding: 0;
   }
 
   .description-title {
@@ -1027,14 +999,11 @@ p {
     width: calc((100% - 24px) / 2);
   }
 
-  .team {
-    height: 1224px;
-  }
-
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px 24px;
+    justify-content: center;
   }
 
   .info {
@@ -1051,20 +1020,16 @@ p {
     width: calc((100% - 24px) / 2);
   }
 
-  .footer {
-    padding: 0;
-    height: 456px;
-  }
-
   .footer .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 96px 0;
+    padding: 0 108px;
   }
 
   .footer-container {
-    margin-left: 108px;
+    width: 264px;
     margin-right: 24px;
+    margin-bottom: 72px;
     text-align: left;
   }
 
@@ -1074,7 +1039,6 @@ p {
 
   .footer-social-icon {
     margin: 0;
-    margin-bottom: 104px;
   }
 
   .text-social {
@@ -1083,7 +1047,6 @@ p {
 
   .subscribe {
     text-align: left;
-    margin-left: 108px;
   }
 
   .form-email {
@@ -1093,7 +1056,6 @@ p {
 
   .email-input {
     width: 264px;
-    margin-left: 108px;
   }
 
   .email-button {
@@ -1134,13 +1096,25 @@ p {
 
   .menu {
     margin: 0;
-    margin-top: 24px;
-    margin-right: 156px;
   }
 
-  .address {
+  .address .address-list {
     flex-direction: row;
     gap: 40px;
+  }
+
+  .address .link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #434455;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .address .link:hover,
+  .address .link:focus {
+    color: #404bbf;
   }
 
   .studio {
@@ -1152,7 +1126,6 @@ p {
       ),
       url(../images/hero-pc.jpg);
     width: 1440px;
-    height: 600px;
     padding: 188px 0;
     margin: 0 auto;
   }
@@ -1178,7 +1151,7 @@ p {
 
   .description {
     width: 100%;
-    height: 224px;
+    padding: 120px 0;
   }
 
   .description-list {
@@ -1221,12 +1194,11 @@ p {
   }
 
   .team {
-    height: 780px;
+    padding: 120px 0;
   }
 
   .team .container {
     width: 100%;
-    height: inherit;
     align-items: center;
     justify-content: center;
   }
@@ -1237,12 +1209,13 @@ p {
   }
 
   .portfolio {
-    padding: 120px 0 120px 0;
+    padding: 120px 0;
   }
 
   .portfolio-list {
     flex-wrap: wrap;
     gap: 48px 24px;
+    box-shadow: none;
   }
 
   .portfolio-list li {
@@ -1250,17 +1223,14 @@ p {
   }
 
   .footer {
-    height: 312px;
+    padding: 100px 0;
   }
 
   .footer .container {
     justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: baseline;
-    margin: 0;
-    padding: 0;
-    padding: 100px 0;
-    margin: 0 156px;
+    padding: 0 15px;
   }
 
   .footer-container {
